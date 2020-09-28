@@ -1,0 +1,47 @@
+<HTML>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://streamworx.id/stx-web/    ">
+            <img src="./0.png" width="30" height="30" alt="">
+            STX Datalake
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" style="margin-left:80px;" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="font-size: 14px;">
+                <li class="nav-item ">
+                    <a class="nav-link" >Home</a>
+                </li>
+               
+                <li class="nav-item ">
+                    <a class="nav-link" >Sales Forecast</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+
+	<div class="container">
+		<div class="row">
+      <div class='col'>
+      <button [routerLink]="['']"> Home</button>
+      </div>
+      <div class='col'>
+      <button [routerLink]="['/lgpage']" routerLinkActive="active">Login</button>
+		      </div>
+			</div>
+	</div>
+
+</body>
+<highcharts-chart [Highcharts]="Highcharts" [options]="basicLine"></highcharts-chart>
+
+<highcharts-chart [Highcharts]="Highcharts" [options]="barchart"></highcharts-chart>
+
+<div id="container"></div>
+<div>
+	<router-outlet></router-outlet>
+</div>
+</HTML>
